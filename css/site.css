@@ -87,7 +87,59 @@ main ul.liste{max-width:62ch;padding-left:1.2em;margin:0 0 1em}main ul.liste li{
 .entree{min-height:calc(100vh - 46px)}
 .sommet{background:#000;padding:20px 14px 6px;text-align:center;color:#fff;font-size:1rem;font-weight:600;letter-spacing:.4em;text-transform:uppercase}
 .moitie .bouton{letter-spacing:.22em;padding:15px 30px}
+/* Le nom du groupe : les deux sommets (23 novembre 2026). Les pointes se touchent à la base, sans se chevaucher. */
+.gp .marque{color:var(--hp-marine);gap:14px;letter-spacing:.3em;font-size:1rem}
+.gp .marque .pics{display:flex;align-items:flex-end;gap:3px}
+.gp .marque .pics img{height:36px;width:auto}.gp .marque .pics img+img{height:30px}
+.gp .marque .txt span{font-weight:300}.gp .marque .txt b{font-weight:800}
+/* Bande de tête mince des pages du groupe : marine, titre en blanc, les deux sommets en filigrane (demande d'Alexandre : pas de photo, bande pas trop haute). */
+section.bande{position:relative;background:var(--hp-marine);color:#fff;overflow:hidden;padding:0}
+.bande .wrap{position:relative;padding-top:30px;padding-bottom:26px}
+.bande h1{margin:0;font-size:clamp(1.7rem,3.6vw,2.5rem)}.bande .k{margin-bottom:8px}
+.bande .filet{width:96px;height:3px;margin:0 0 14px;background:linear-gradient(90deg,var(--hp-bleu) 0 50%,var(--cp-or) 50% 100%)}
+.bande .filigrane{position:absolute;right:max(24px,6%);bottom:0;display:flex;align-items:flex-end;gap:18px;pointer-events:none}
+.bande .filigrane img{display:block;width:auto;height:106px}
+.bande .filigrane img:first-child{filter:brightness(0) invert(1);opacity:.13}
+.bande .filigrane img+img{height:88px;opacity:.38}
+.bande+section{padding-top:clamp(28px,4vw,44px)}
+@media (max-width:760px){.gp .marque .pics img{height:30px}.gp .marque .pics img+img{height:25px}.gp .marque{letter-spacing:.2em;font-size:.9rem}.bande .filigrane{right:10px;gap:10px}.bande .filigrane img{height:70px}.bande .filigrane img+img{height:58px}}
+@media (max-width:640px){.bande .filigrane{display:none}}
+@media (max-width:380px){.gp .marque{gap:8px;letter-spacing:.08em;font-size:.78rem}.gp .marque .pics img{height:24px}.gp .marque .pics img+img{height:20px}.gp .menu-bouton{padding:11px 12px}}
+@media (max-width:560px){.personnes .vide{aspect-ratio:auto;min-height:120px}}
+.territoire{display:grid;grid-template-columns:max-content 1fr;gap:12px 32px;max-width:900px;margin:22px 0 24px}.territoire dt{font-weight:600}.territoire dd{margin:0}
+@media (max-width:640px){.territoire{grid-template-columns:1fr;gap:2px}.territoire dd{margin-bottom:14px}}
+/* Corrections du vérificateur à contexte neuf sur la 0.7.9 (23 novembre 2026) : le menu de Capital Peak à cinq liens, les grilles sans carte orpheline, les boutons des deux portes alignés. */
+@media (min-width:761px){.cp nav ul{gap:16px}.cp nav a{font-size:.8rem;letter-spacing:.06em}.cp nav li.autre-li{margin-left:4px}.cp nav li.autre-li a{font-size:.76rem;letter-spacing:.06em}.cp .marque{letter-spacing:.22em}}
+@media (min-width:761px) and (max-width:1023px){.cp nav ul{gap:13px}.cp nav a{font-size:.76rem;letter-spacing:.04em}.cp nav li.autre-li a{font-size:.74rem}}
+@media (max-width:380px){.cp .marque{gap:8px;letter-spacing:.12em;font-size:.82rem}.cp .menu-bouton{padding:11px 12px}}
+@media (min-width:1100px){.grille.methode{grid-template-columns:repeat(12,1fr)}.grille.methode .carte{grid-column:span 3}.grille.methode .carte:nth-child(n+5){grid-column:span 4}}
+@media (min-width:600px) and (max-width:1099px){.grille.methode{grid-template-columns:1fr 1fr}.grille.methode .carte:last-child{grid-column:1/-1}}
+@media (min-width:600px) and (max-width:1099px){.grille.quatre{grid-template-columns:1fr 1fr}}
+.grille.portes .carte{display:flex;flex-direction:column}.grille.portes .carte p:last-child{margin-top:auto;margin-bottom:0}
 .entree-cadre{position:relative}
+/* Effet d'introduction de la page d'entrée (demande d'Alexandre, 23 novembre 2026) : joué une fois au chargement, puis tout reste fixe. Sans animation (navigateur ancien, mouvement réduit demandé), la page s'affiche telle quelle. */
+.entree{background:#000;overflow:hidden;overflow:clip}
+.moitie:focus-visible{outline:0}.moitie:focus-visible::after{content:"";position:absolute;inset:10px;border:3px solid #fff;pointer-events:none}.moitie.d:focus-visible::after{border-color:var(--cp-orclair)}
+@media (prefers-reduced-motion:no-preference){
+.moitie.g{animation:entre-g .9s cubic-bezier(.22,.8,.2,1) both}
+.moitie.d{animation:entre-d .9s cubic-bezier(.22,.8,.2,1) .2s both}
+.moitie img.fond{animation:pose 2.4s ease-out both}
+.moitie .logo{animation:monte .7s ease-out .95s both}
+.moitie .phrase{animation:monte .7s ease-out 1.15s both}
+.moitie p{animation:monte .7s ease-out 1.3s both}
+.moitie .bouton{animation:monte .7s ease-out 1.45s both}
+.sommet{animation:sommet 1s ease-out 1.7s both}
+}
+@keyframes entre-g{from{transform:translateX(-100%);opacity:0}to{transform:none;opacity:1}}
+@keyframes entre-d{from{transform:translateX(100%);opacity:0}to{transform:none;opacity:1}}
+@keyframes entre-h{from{transform:translateY(-40px);opacity:0}to{transform:none;opacity:1}}
+@keyframes entre-b{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+@keyframes pose{from{transform:scale(1.12)}to{transform:none}}
+@keyframes monte{from{transform:translateY(18px);opacity:0}to{transform:none;opacity:1}}
+@keyframes sommet{from{color:transparent;letter-spacing:.55em}to{color:#fff;letter-spacing:.4em}}
+@media (max-width:760px){.moitie.g{animation-name:entre-h}.moitie.d{animation-name:entre-b}}
+@keyframes sommet-etroit{from{color:transparent}to{color:#fff}}
+@media (max-width:340px){.sommet{animation-name:sommet-etroit}}
 footer.mini{background:#000;color:#fff;padding:16px 24px;font-size:.8rem;text-align:center;line-height:1.9}footer.mini span{display:inline-block;margin:0 10px}
 @media (max-width:760px){.entree{grid-template-columns:1fr}.moitie{min-height:50vh}
 .barre .wrap{min-height:60px;padding-top:9px;padding-bottom:9px}.marque img{height:36px}.cp .marque img{height:26px}
