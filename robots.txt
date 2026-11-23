@@ -1,0 +1,26 @@
+# visezlesommet.ca : Habitation Peak et Capital Peak. Tout le site est ouvert, aux moteurs de recherche comme aux agents IA.
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.visezlesommet.ca/sitemap.xml

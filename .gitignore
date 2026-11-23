@@ -1,0 +1,5 @@
+# Dépôt public : seul le site généré part en ligne. Les sources, les références internes et les planches de travail restent dans la bibliothèque.
+_src/
+_travail/
+*.bak
+.DS_Store
