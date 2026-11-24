@@ -108,14 +108,14 @@ section.bande{position:relative;background:var(--hp-marine);color:#fff;overflow:
 @media (max-width:560px){.personnes .vide{aspect-ratio:auto;min-height:120px}}
 .territoire{display:grid;grid-template-columns:max-content 1fr;gap:12px 32px;max-width:900px;margin:22px 0 24px}.territoire dt{font-weight:600}.territoire dd{margin:0}
 @media (max-width:640px){.territoire{grid-template-columns:1fr;gap:2px}.territoire dd{margin-bottom:14px}}
-/* Corrections du vérificateur à contexte neuf sur la 0.7.9 (23 novembre 2026) : le menu de Capital Peak à cinq liens, les grilles sans carte orpheline, les boutons des deux portes alignés. */
+/* Corrections du vérificateur à contexte neuf sur la 0.7.9 (23 novembre 2026) : le menu de Capital Peak à cinq liens, les grilles sans carte orpheline, les boutons des deux cartes alignés. */
 @media (min-width:761px){.cp nav ul{gap:16px}.cp nav a{font-size:.8rem;letter-spacing:.06em}.cp nav li.autre-li{margin-left:4px}.cp nav li.autre-li a{font-size:.76rem;letter-spacing:.06em}.cp .marque{letter-spacing:.22em}}
 @media (min-width:761px) and (max-width:1023px){.cp nav ul{gap:13px}.cp nav a{font-size:.76rem;letter-spacing:.04em}.cp nav li.autre-li a{font-size:.74rem}}
 @media (max-width:380px){.cp .marque{gap:8px;letter-spacing:.12em;font-size:.82rem}.cp .menu-bouton{padding:11px 12px}}
 @media (min-width:1100px){.grille.methode{grid-template-columns:repeat(12,1fr)}.grille.methode .carte{grid-column:span 3}.grille.methode .carte:nth-child(n+5){grid-column:span 4}}
 @media (min-width:600px) and (max-width:1099px){.grille.methode{grid-template-columns:1fr 1fr}.grille.methode .carte:last-child{grid-column:1/-1}}
 @media (min-width:600px) and (max-width:1099px){.grille.quatre{grid-template-columns:1fr 1fr}}
-.grille.portes .carte{display:flex;flex-direction:column}.grille.portes .carte p:last-child{margin-top:auto;margin-bottom:0}
+.grille.choix .carte{display:flex;flex-direction:column}.grille.choix .carte p:last-child{margin-top:auto;margin-bottom:0}
 .entree-cadre{position:relative}
 /* Effet d'introduction de la page d'entrée (demande d'Alexandre, 23 novembre 2026) : joué une fois au chargement, puis tout reste fixe. Sans animation (navigateur ancien, mouvement réduit demandé), la page s'affiche telle quelle. */
 .entree{background:#000;overflow:hidden;overflow:clip}
