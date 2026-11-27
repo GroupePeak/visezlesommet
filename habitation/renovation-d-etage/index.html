@@ -31,7 +31,21 @@
 <h3 class="t3" style="margin-top:24px">Nos autres services</h3><ul class="liste"><li><a href="../../habitation/agrandissement/">Agrandissement</a></li><li><a href="../../habitation/ajout-d-etage/">Ajout d'étage</a></li><li><a href="../../habitation/revetement-exterieur/">Revêtement extérieur</a></li></ul></div></section>
 <section id="contact"><div class="wrap contact"><div class="k">Soumission</div><h2>Parlez-nous de votre projet</h2>
 <p>Appelez-nous ou écrivez-nous. Dites-nous où se trouve le bâtiment et ce que vous voulez faire. Quelques photos et les dimensions approximatives nous aident à vous répondre plus vite.</p>
-<p style="margin:22px 0 26px"><a class="bouton" href='mailto:m-a@visezlesommet.ca,mathcarmel@visezlesommet.ca?subject=Demande%20de%20soumission&body=Bonjour%2C%0D%0A%0D%0AAdresse%20du%20b%C3%A2timent%20%3A%0D%0AType%20de%20travaux%20%28agrandissement%2C%20ajout%20d%27%C3%A9tage%2C%20r%C3%A9novation%2C%20rev%C3%AAtement%2C%20autre%29%20%3A%0D%0ACe%20que%20vous%20voulez%20faire%20%3A%0D%0A%C3%89ch%C3%A9ancier%20souhait%C3%A9%20%3A%0D%0AVotre%20nom%20et%20votre%20t%C3%A9l%C3%A9phone%20%3A%0D%0A%0D%0ASi%20vous%20les%20avez%2C%20joignez%20quelques%20photos%20et%20les%20dimensions%20approximatives.%0D%0A%0D%0AMerci%20%21'>Demander une soumission par courriel</a></p>
+<p style="margin:22px 0 26px"><a class="bouton" id="btn-soumission" href='mailto:m-a@visezlesommet.ca,mathcarmel@visezlesommet.ca?subject=Demande%20de%20soumission&body=Bonjour%2C%0D%0A%0D%0AAdresse%20du%20b%C3%A2timent%20%3A%0D%0AType%20de%20travaux%20%28agrandissement%2C%20ajout%20d%27%C3%A9tage%2C%20r%C3%A9novation%2C%20rev%C3%AAtement%2C%20autre%29%20%3A%0D%0ACe%20que%20vous%20voulez%20faire%20%3A%0D%0A%C3%89ch%C3%A9ancier%20souhait%C3%A9%20%3A%0D%0AVotre%20nom%20et%20votre%20t%C3%A9l%C3%A9phone%20%3A%0D%0A%0D%0ASi%20vous%20les%20avez%2C%20joignez%20quelques%20photos%20et%20les%20dimensions%20approximatives.%0D%0A%0D%0AMerci%20%21'>Demander une soumission par courriel</a></p>
+<div class="carte" id="gabarit-soumission" style="display:none;margin-bottom:26px"><p style="margin-top:0">Votre courriel ne s'est pas ouvert? Copiez ce texte, complétez-le et envoyez-le à <span style="white-space:nowrap">m-a@visezlesommet.ca</span> et à <span style="white-space:nowrap">mathcarmel@visezlesommet.ca</span>.</p>
+<pre id="gabarit-texte" style="white-space:pre-wrap;font:inherit;margin:0 0 18px">Bonjour,
+
+Adresse du bâtiment :
+Type de travaux (agrandissement, ajout d'étage, rénovation, revêtement, autre) :
+Ce que vous voulez faire :
+Échéancier souhaité :
+Votre nom et votre téléphone :
+
+Si vous les avez, joignez quelques photos et les dimensions approximatives.
+
+Merci !</pre>
+<button type="button" class="bouton creux" id="copier-gabarit" style="font-family:inherit;cursor:pointer">Copier le texte</button></div>
+<script>(function(){var b=document.getElementById("btn-soumission"),g=document.getElementById("gabarit-soumission"),c=document.getElementById("copier-gabarit");if(!b||!g||!c)return;b.addEventListener("click",function(){g.style.display="block";});c.addEventListener("click",function(){var t=document.getElementById("gabarit-texte").innerText;if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){c.textContent="Texte copié";},function(){c.textContent="Sélectionnez le texte et copiez-le";});}else{c.textContent="Sélectionnez le texte et copiez-le";}});})();</script>
 <dl><dt>Marc-Antoine Emard</dt><dd><a href="tel:+15148869739">514 886-9739</a> · <a href="mailto:m-a@visezlesommet.ca">m-a@visezlesommet.ca</a></dd>
 <dt>Mathieu Carmel</dt><dd><a href="tel:+15794886244">579 488-6244</a> · <a href="mailto:mathcarmel@visezlesommet.ca">mathcarmel@visezlesommet.ca</a></dd>
 <dt>Heures</dt><dd>Lundi au vendredi, 8 h à 16 h 30</dd><dt>Licence RBQ</dt><dd>5840-2033-01</dd></dl></div></section></main>
